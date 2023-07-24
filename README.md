@@ -1,1 +1,1 @@
-# argocd-namespaced-instances
+# argocd-multiple
