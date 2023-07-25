@@ -1,0 +1,7 @@
+nameSuffix:
+- path: metadata/name
+  apiVersion: v1
+  kind: ClusterRole
+- path: metadata/name
+  apiVersion: v1
+  kind: ClusterRoleBinding  

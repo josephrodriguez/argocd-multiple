@@ -1,0 +1,5 @@
+version: 1.0.0
+namespaces:
+  - name: develop
+  - name: staging
+  - name: production
