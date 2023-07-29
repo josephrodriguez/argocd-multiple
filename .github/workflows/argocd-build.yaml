@@ -1,0 +1,24 @@
+name: Build and Release Argo CD
+
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download and install Kustomizegen
+        run: |
+          curl -LO https://github.com/josephrodriguez/kustomizegen/releases/latest/download/kustomizegen_amd64.tar.gz
+          tar -xzvf kustomizegen_amd64.tar.gz
+          sudo mv kustomizegen /usr/local/bin/
+          sudo chmod +x /usr/local/bin/kustomizegen
+          rm kustomizegen_amd64.tar.gz
+
+      - name: Generate Overlays
+        run: kustomizegen generate-overlays --root argocd/base

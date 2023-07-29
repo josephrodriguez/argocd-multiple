@@ -1,5 +1,6 @@
 version: 1.0.0
-namespaces:
+nameSuffix: "-{{ .Namespace }}"
+overlays:
   - name: develop
   - name: staging
   - name: production
