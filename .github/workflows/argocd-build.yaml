@@ -20,5 +20,16 @@ jobs:
           sudo chmod +x /usr/local/bin/kustomizegen
           rm kustomizegen_amd64.tar.gz
 
-      - name: Generate Overlays
+      - name: Kustomizegen Version
+        run: kustomizegen version
+
+      - name: Kustomizegen Generate overlays
         run: kustomizegen generate-overlays --root argocd/base
+
+      - name: Kustomizegen Print build command 
+        run: kustomizegen print-build-command --root argocd/base
+
+      - name: Kustomizegen Destroy overlays
+        run: kustomizegen destroy-overlays --root argocd/base        
+
+        
