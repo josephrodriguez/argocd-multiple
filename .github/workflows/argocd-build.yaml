@@ -30,6 +30,11 @@ jobs:
         run: kustomizegen print-build-command --root argocd/base
 
       - name: Kustomizegen Destroy overlays
-        run: kustomizegen destroy-overlays --root argocd/base        
+        run: kustomizegen destroy-overlays --root argocd/base
+
+      - name: Run Setup Kustomizegen Action
+        uses: ./.github/actions/setup-kustomizegen@v1
+        with:
+          version: '0.1.1'        
 
         

@@ -1,0 +1,11 @@
+name: 'kustomizegen'
+description: 'Setup Kustomizegen GitHub Action'
+author: 'Jose Rodriguez'
+inputs:
+  version:
+    description: 'Kustomizegen version to install'
+    required: false
+    default: 'latest'
+runs:
+  using: 'executable'
+  path: './setup-kustomizegen'
