@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Kustomizegen v0.1.1
-        uses: josephrodriguez/setup-kustomizegen@v1.0.0-beta1
+        uses: josephrodriguez/setup-kustomizegen@v1-alpha1
         with:
           kustomizegen-version: '0.1.1'
 
